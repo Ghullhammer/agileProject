@@ -11,3 +11,9 @@ class Transaction(db.Model):
         self.buyer_id = buyer_id
         self.asset_id = asset_id
         self.status = "Pending"
+
+    def mark_completed(self):
+        """
+        Встановлює статус транзакції як 'Completed'.
+        """
+        self.status = "Completed"
